@@ -30,7 +30,7 @@ const STEPS = [
   {
     num: "03",
     title: "Submit verified proof",
-    body: "Upload clear photos with geo-tagged location data. Meet the bounty requirements — plate, motion, photo count.",
+    body: "Submit 2 photos with geo-tagged location. License plate visible. Tag @carhunterssol on X with your spot.",
     icon: ShieldCheck,
   },
   {
@@ -62,7 +62,7 @@ const FAQ = [
   },
   {
     q: "What counts as a valid spot?",
-    a: "The car must match the bounty spec, be on public roads, and include real photos with location metadata. Rendered images, dealer inventory, and museum displays are rejected.",
+    a: "The car must match the bounty spec and be on public roads. Every submission needs 2 photos, geo-tagged location, a visible license plate, and a tag of @carhunterssol on X. Rendered images, dealer inventory, and museum displays are rejected.",
   },
   {
     q: "How do I get paid?",

@@ -16,6 +16,8 @@ export interface BountyRequirements {
   mustIncludePlate: boolean;
   mustIncludeLocation: boolean;
   mustBeMoving: boolean;
+  mustTagOnX: boolean;
+  xHandle: string;
   notes?: string;
 }
 

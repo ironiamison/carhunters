@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { RequirementsList } from "@/components/RequirementsList";
 import {
   formatSol,
   formatRelativeTime,
@@ -84,6 +85,10 @@ export default async function BountyDetailPage({ params }: PageProps) {
                   </dd>
                 </div>
               </dl>
+              <div className="mt-12 border-t border-border-subtle pt-10">
+                <p className="eyebrow">Requirements</p>
+                <RequirementsList req={req} />
+              </div>
             </div>
             <div>
               <div className="sticky top-24 border border-border bg-surface p-8">
@@ -128,18 +133,10 @@ export default async function BountyDetailPage({ params }: PageProps) {
                 </div>
               </dl>
 
-              <div className="mt-12 border-t border-border-subtle pt-10">
-                <p className="eyebrow">Requirements</p>
-                <ul className="mt-5 space-y-2.5 text-sm text-neutral-400">
-                  <li>{req.minPhotos}+ photos</li>
-                  {req.mustIncludeLocation && <li>Geo-tagged location</li>}
-                  {req.mustIncludePlate && <li>License plate visible</li>}
-                  {req.mustBeMoving && <li>Car in motion</li>}
-                </ul>
-                {req.notes && (
-                  <p className="mt-6 text-sm text-muted">{req.notes}</p>
-                )}
-              </div>
+            <div className="mt-12 border-t border-border-subtle pt-10">
+              <p className="eyebrow">Requirements</p>
+              <RequirementsList req={req} />
+            </div>
             </div>
 
             <div>
