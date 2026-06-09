@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Logo } from "@/components/Logo";
+import { XLink } from "@/components/XLink";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -56,19 +57,23 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <XLink className="flex items-center" />
           <Link href="/create" className="btn btn-solid !px-5 !py-2.5">
             Post bounty
           </Link>
         </nav>
 
+        <div className="flex items-center gap-4 lg:hidden">
+          <XLink className="flex items-center" />
         <button
           type="button"
-          className="text-muted lg:hidden"
+          className="text-muted"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
+        </div>
       </div>
 
       {open && (

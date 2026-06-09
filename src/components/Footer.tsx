@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { XLink } from "@/components/XLink";
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
             Car spotting bounties. Verified proof. SOL payouts from escrow.
           </p>
         </div>
-        <div className="flex gap-10">
+        <div className="flex flex-wrap items-center gap-10">
           <Link href="/bounties" className="nav-link">
             Bounties
           </Link>
@@ -21,6 +22,7 @@ export function Footer() {
           <Link href="/how-it-works" className="nav-link">
             About
           </Link>
+          <XLink className="flex items-center" iconClassName="h-[0.9rem] w-[0.9rem]" />
         </div>
       </div>
     </footer>
