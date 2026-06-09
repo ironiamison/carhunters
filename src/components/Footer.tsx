@@ -16,9 +16,6 @@ export function Footer() {
           <Link href="/bounties" className="nav-link">
             Bounties
           </Link>
-          <Link href="/create" className="nav-link">
-            Post
-          </Link>
           <Link href="/how-it-works" className="nav-link">
             About
           </Link>

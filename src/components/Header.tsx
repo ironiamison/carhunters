@@ -58,9 +58,6 @@ export function Header() {
             </Link>
           ))}
           <XLink className="flex items-center" />
-          <Link href="/create" className="btn btn-solid !px-5 !py-2.5">
-            Post bounty
-          </Link>
         </nav>
 
         <div className="flex items-center gap-4 lg:hidden">
@@ -88,13 +85,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/create"
-            onClick={() => setOpen(false)}
-            className="btn btn-solid mt-6 w-full"
-          >
-            Post bounty
-          </Link>
         </div>
       )}
     </header>
