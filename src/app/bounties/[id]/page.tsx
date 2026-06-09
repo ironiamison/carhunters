@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Lock } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import {
   formatSol,
   formatRelativeTime,
@@ -43,16 +43,12 @@ export default async function BountyDetailPage({ params }: PageProps) {
             <p className="eyebrow text-white/60">
               Tier {bounty.tier} · {tierConfig.label}
             </p>
-            {locked ? (
-              <div className="mt-4 flex items-center gap-3">
-                <Lock className="h-6 w-6 text-white/70" />
-                <h1 className="headline-sm">Locked</h1>
-              </div>
-            ) : (
-              <>
-                <p className="eyebrow mt-2 text-white/60">{bounty.make}</p>
-                <h1 className="headline-sm mt-2 max-w-3xl">{bounty.model}</h1>
-              </>
+            <p className="eyebrow mt-2 text-white/60">{bounty.make}</p>
+            <h1 className="headline-sm mt-2 max-w-3xl">{bounty.model}</h1>
+            {locked && (
+              <p className="mt-3 text-xs uppercase tracking-[0.15em] text-muted">
+                Upcoming · Tier {bounty.tier}
+              </p>
             )}
           </div>
         </div>
@@ -68,17 +64,39 @@ export default async function BountyDetailPage({ params }: PageProps) {
         </Link>
 
         {locked ? (
-          <div className="mt-10 max-w-lg">
-            <p className="text-sm leading-relaxed text-neutral-400">
-              This bounty is part of Tier {bounty.tier}. Complete all four cars in
-              Tier {bounty.tier - 1} to unlock this group.
-            </p>
-            <p className="mt-6 text-sm text-muted">
-              Reward when unlocked: {formatSol(bounty.reward)}
-            </p>
-            <Link href="/bounties" className="btn btn-outline mt-10 inline-flex">
-              View active tier
-            </Link>
+          <div className="mt-10 grid gap-16 lg:grid-cols-[1fr_300px] lg:gap-20">
+            <div>
+              <p className="text-sm text-muted">
+                Upcoming bounty · unlocks when Tier {bounty.tier - 1} is complete
+              </p>
+              <p className="mt-10 max-w-xl text-sm leading-[1.85] text-neutral-400">
+                {bounty.description}
+              </p>
+              <dl className="mt-12 grid gap-8 border-t border-border-subtle pt-10 sm:grid-cols-2">
+                <div>
+                  <dt className="eyebrow">Location</dt>
+                  <dd className="mt-2 text-sm text-white">{bounty.location}</dd>
+                </div>
+                <div>
+                  <dt className="eyebrow">Reward</dt>
+                  <dd className="mt-2 text-sm text-white">
+                    {formatSol(bounty.reward)}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div>
+              <div className="sticky top-24 border border-border bg-surface p-8">
+                <p className="eyebrow">Status</p>
+                <p className="mt-3 text-2xl font-light text-white">Upcoming</p>
+                <p className="mt-2 text-xs text-dim">
+                  Complete all 4 Tier {bounty.tier - 1} spots to unlock
+                </p>
+                <Link href="/bounties" className="btn btn-outline mt-8 w-full">
+                  View active tier
+                </Link>
+              </div>
+            </div>
           </div>
         ) : (
           <div className="mt-10 grid gap-16 lg:grid-cols-[1fr_300px] lg:gap-20">

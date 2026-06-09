@@ -34,8 +34,8 @@ export function TierOverview() {
                 Tier {config.tier}
               </span>
               {!unlocked && (
-                <span className="text-[0.625rem] uppercase tracking-[0.15em] text-dim">
-                  Locked
+                <span className="text-[0.625rem] uppercase tracking-[0.15em] text-muted">
+                  Upcoming
                 </span>
               )}
               {complete && (

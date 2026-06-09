@@ -26,14 +26,14 @@ export function TierSection({ tier, showLocked = true }: TierSectionProps) {
   if (!showLocked && !unlocked) return null;
 
   return (
-    <section className={cn(!unlocked && "opacity-60")}>
+    <section>
       <div className="mb-8 flex flex-col gap-4 border-b border-border-subtle pb-8 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <div className="flex items-center gap-4">
             <span className="text-xs tabular-nums text-accent">Tier {tier}</span>
             {!unlocked && (
-              <span className="text-[0.625rem] uppercase tracking-[0.15em] text-dim">
-                Locked
+              <span className="text-[0.625rem] uppercase tracking-[0.15em] text-muted">
+                Upcoming
               </span>
             )}
             {unlocked && completed === CARS_PER_TIER && (
