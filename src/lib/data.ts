@@ -117,14 +117,13 @@ export const bounties: Bounty[] = [
   // ── Tier 2 · Sport (1 + 1.25 + 1.5 + 2 = 5.75 SOL) ──
   {
     id: "t2-1",
-    title: "R34 GT-R V-Spec II — Los Angeles",
+    title: "Audi R8 V10 Performance — Los Angeles",
     description:
-      "Verified R34 Skyline GT-R V-Spec II in the wild around LA. Must show V-Spec badge.",
-    make: "Nissan",
-    model: "Skyline GT-R R34",
-    yearRange: "1999-2002",
-    color: "Bayside Blue",
-    category: "jdm",
+      "R8 V10 Performance coupe or spyder on LA roads. Must be on public roads, not at a dealer.",
+    make: "Audi",
+    model: "R8 V10 Performance",
+    yearRange: "2020-2026",
+    category: "supercar",
     rarity: "legendary",
     tier: 2,
     reward: 1,
@@ -138,8 +137,8 @@ export const bounties: Bounty[] = [
     submissions: 7,
     views: 3201,
     requirements: bountyRequirements,
-    tags: ["r34", "gtr", "jdm"],
-    imageUrl: "/cars/b2.jpg",
+    tags: ["audi", "r8", "supercar"],
+    imageUrl: "/cars/t2-r8.jpg",
   },
   {
     id: "t2-2",
@@ -271,12 +270,12 @@ export const bounties: Bounty[] = [
   },
   {
     id: "t3-3",
-    title: "Porsche 911 GT3 RS — Texas",
+    title: "Lamborghini Aventador SVJ — Texas",
     description:
-      "992 GT3 RS on public roads anywhere in Texas. Weissach pack preferred.",
-    make: "Porsche",
-    model: "911 GT3 RS",
-    yearRange: "2023-2026",
+      "Aventador SVJ on public roads anywhere in Texas. ALA wing must be visible.",
+    make: "Lamborghini",
+    model: "Aventador SVJ",
+    yearRange: "2019-2021",
     category: "supercar",
     rarity: "rare",
     tier: 3,
@@ -291,8 +290,8 @@ export const bounties: Bounty[] = [
     submissions: 1,
     views: 5620,
     requirements: bountyRequirements,
-    tags: ["porsche", "gt3rs", "992"],
-    imageUrl: "/cars/b4.jpg",
+    tags: ["lamborghini", "aventador", "svj"],
+    imageUrl: "/cars/t3-aventador.jpg",
   },
   {
     id: "t3-4",
@@ -317,7 +316,7 @@ export const bounties: Bounty[] = [
     views: 3400,
     requirements: bountyRequirements,
     tags: ["mclaren", "720s", "supercar"],
-    imageUrl: "/cars/b6.jpg",
+    imageUrl: "/cars/t3-720s.jpg",
   },
 
   // ── Tier 4 · Hyper (5 + 6 + 8 + 10 = 29 SOL) ──
@@ -344,7 +343,7 @@ export const bounties: Bounty[] = [
     featured: true,
     requirements: bountyRequirements,
     tags: ["mclaren", "f1", "hypercar"],
-    imageUrl: "/cars/b6.jpg",
+    imageUrl: "/cars/t4-f1.jpg",
   },
   {
     id: "t4-2",
@@ -369,7 +368,7 @@ export const bounties: Bounty[] = [
     views: 12000,
     requirements: bountyRequirements,
     tags: ["koenigsegg", "jesko", "hypercar"],
-    imageUrl: "/cars/b10.jpg",
+    imageUrl: "/cars/t4-jesko.jpg",
   },
   {
     id: "t4-3",
@@ -394,16 +393,16 @@ export const bounties: Bounty[] = [
     views: 15600,
     requirements: bountyRequirements,
     tags: ["ferrari", "laferrari", "hypercar"],
-    imageUrl: "/cars/b3.jpg",
+    imageUrl: "/cars/t4-laferrari.jpg",
   },
   {
     id: "t4-4",
-    title: "Bugatti Chiron Super Sport — Cannes",
+    title: "Bugatti Divo — Cannes",
     description:
-      "Chiron Super Sport on the French Riviera during summer season. Full car, clear lighting.",
+      "Bugatti Divo on the French Riviera during summer season. Full car, clear lighting.",
     make: "Bugatti",
-    model: "Chiron Super Sport",
-    yearRange: "2020-2026",
+    model: "Divo",
+    yearRange: "2019-2021",
     category: "hypercar",
     rarity: "unicorn",
     tier: 4,
@@ -418,8 +417,8 @@ export const bounties: Bounty[] = [
     submissions: 0,
     views: 22000,
     requirements: bountyRequirements,
-    tags: ["bugatti", "chiron", "hypercar"],
-    imageUrl: "/cars/b8.jpg",
+    tags: ["bugatti", "divo", "hypercar"],
+    imageUrl: "/cars/t4-divo.jpg",
   },
 ];
 
